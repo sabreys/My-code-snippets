@@ -1,5 +1,7 @@
 # if you want to store unique and unrepeated objects in set . you need to overwrite __eq__ and __hash__ .every object has unique hash value, so set can not recognize  same objects.
 # we formatted the hash code with our identifier like primary key for an object and we define how to compare this objects.
+# "the only required property is that objects which compare equal have the same hash value" from documantation
+# tags: python , objects , same , duplicated , set , uniquely 
 
 class Comment:
     def __init__(self,name,text):
