@@ -1,0 +1,32 @@
+# küçük sayıların daha yüksek çıkma ihtimaline sahip olduğu random fonksiyonu. istenen aralıklarla iter sayısını yükselterek çıkma olasılığı azaltılır
+
+def yogunluklu_random(sayi=random.randint(0, 50),iter=0):
+
+  if(sayi < 2):
+    return sayi
+
+  elif (sayi < 7):
+
+    if (iter > 3):
+      return sayi
+    else:
+      return yogunluklu_random(sayi=random.randint(0, 50), iter=iter + 1)
+
+  elif(sayi<10 ):
+
+    if(iter>5 ):
+      return sayi
+    else:
+      return yogunluklu_random(sayi=random.randint(0, 50),iter=iter+1)
+
+  elif (sayi < 30 ):
+    if (iter > 7):
+      return sayi
+    else:
+      return yogunluklu_random(sayi=random.randint(0, 50), iter=iter + 1)
+
+  elif (sayi <= 50 ):
+    if (iter > 11):
+      return sayi
+    else:
+      return yogunluklu_random(sayi=random.randint(0, 50), iter=iter + 1)
