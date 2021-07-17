@@ -1,0 +1,2 @@
+- android projesi içindeki gradlew'e sağ tıklayarak open in terminal diyin.
+- gradlew signingReport  yazın. sha keyler sarı renkte gösterilecek.
