@@ -1,0 +1,33 @@
+ SfRangeSlider(
+          min: 18,
+          max: 40,
+          values: _values,
+          enableTooltip: true,
+          stepSize: 1,
+          enableIntervalSelection: true,
+          interval: 5,
+          showTicks: true,
+          showLabels: true,
+          minorTicksPerInterval: 1,
+          onChanged: (SfRangeValues values) {
+            SfRangeValues val;
+
+            setState(() {
+              if (_values.start == values.start) {
+                if (values.end - values.start > 5) {
+                  val = SfRangeValues(values.end - 5, values.end);
+                  _values = val;
+                } else {
+                  _values = values;
+                }
+              } else {
+                if (values.end - values.start > 5) {
+                  val = SfRangeValues(values.start, values.start + 5);
+                  _values = val;
+                } else {
+                  _values = values;
+                }
+              }
+            });
+          },
+        );
