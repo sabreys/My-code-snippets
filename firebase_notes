@@ -1,0 +1,1 @@
+Never use "token" keyword on firebase functions or firestore because admin sdk can not read from that collection!!!
