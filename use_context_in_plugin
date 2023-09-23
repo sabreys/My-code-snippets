@@ -1,0 +1,30 @@
+1- Import ActivityAware:
+
+import io.flutter.embedding.engine.plugins.activity.ActivityAware
+2- implement ActivityAware in your class:
+
+public class ClassName: FlutterPlugin, MethodCallHandler, ActivityAware { 
+3- Define lateinit variables to use it class:
+
+private lateinit var context: Context
+private lateinit var activity: Activity
+4- Add these functions:
+
+override fun onDetachedFromActivity() {
+    TODO("Not yet implemented")
+}
+
+override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
+    TODO("Not yet implemented")
+}
+
+override fun onAttachedToActivity(binding: ActivityPluginBinding) {
+    activity = binding.activity;
+}
+
+override fun onDetachedFromActivityForConfigChanges() {
+    TODO("Not yet implemented")
+}
+5- Add this line in onAttachedToEngine function:
+
+context = flutterPluginBinding.applicationContext
